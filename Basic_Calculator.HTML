@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<title>Basic Calculator</title>
+<link rel="stylesheet" href="css/basic_calculator.css">
+
+</head>
+
+<body>
+<header>
+Basic Calculator
+</header>
+<center>
+<input type="number" name="" value="" id="number1">
+<input type="number" name="" value="" id="number2">
+<div style="">
+<button onclick="sum()"; type="button" name="button">Sum</button>
+<button onclick="Difference()"; type="button" name="button">Difference</button>
+</div>
+<div>
+<button onclick="Product()"; type="button" name="button">Product</button>
+<button onclick="Quotient()"; type="button" name="button">Quotient</button>
+</div>
+<div type="text" name="" value="" id="answer"></div>
+<button onclick="reset();" id="reset" type="button">
+  Clear
+</button>
+</center>
+
+<script type="text/javascript">
+var number1 = document.querySelector("#number1");
+var number2 = document.querySelector("#number2");
+
+function sum(){
+  var number1Val = number1.value;
+  var number2Val = number2.value;
+  var result = parseInt(number1Val)+parseInt(number2Val) ;
+document.querySelector("#answer").textContent=result ;
+}
+
+function Difference(){
+  var number1Val = number1.value;
+  var number2Val = number2.value;
+  var result = parseInt(number1Val)-parseInt(number2Val) ;
+document.querySelector("#answer").textContent=result ;
+}
+
+function Product(){
+  var number1Val = number1.value;
+  var number2Val = number2.value;
+  var result = parseInt(number1Val)*parseInt(number2Val) ;
+document.querySelector("#answer").textContent=result ;
+}
+
+function Quotient(){
+  var number1Val = number1.value;
+  var number2Val = number2.value;
+  var result = parseInt(number1Val)/parseInt(number2Val) ;
+document.querySelector("#answer").textContent=result ;
+}
+
+function reset(){
+  console.log("The clear button was clicked");
+  document.querySelector("#answer").textContent= "";
+  number1.value = "";
+  number2.value = "";
+}
+
+</script>
+</body>
+
+</html>
